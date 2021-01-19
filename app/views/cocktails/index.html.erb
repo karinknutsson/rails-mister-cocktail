@@ -1,16 +1,20 @@
 <div class="nav-bar">
-  <%= link_to "Add cocktail", new_cocktail_path, class: "top-btn" %>
+  <%= link_to "All cocktails", cocktails_path, class: "top-btn" %>
+  <%= link_to "New cocktail", new_cocktail_path, class: "top-btn" %>
 </div>
+
 <div class="title-container">
   <h1>Cocktails</h1>
 </div>
 
 <div class="card-container">
 
-<% 10.times do %>
-<div class="cocktail-card">
- <h3><a href="#">Mojito</a>
-</div>
+<% @cocktails.each do |cocktail| %>
+  <%= link_to cocktail_path(cocktail.id) do %>
+    <div class="cocktail-card">
+      <h3>
+        <%= cocktail.name %>
+      </h3>
+    </div>
+  <% end %>
 <% end %>
-
-</div>

@@ -1,0 +1,25 @@
+.card-container {
+  margin: 36px auto;
+  width: 83vw;
+  display: grid;
+  grid-gap: 3vw;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cocktail-card {
+  width: 25vw;
+  height: 15vw;
+  border: 2pt dotted white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cocktail-card:active, .cocktail-card:hover {
+  background-color: white;
+  color: $tangerine!important;
+  a:active, a:hover {
+    color: $tangerine!important;
+  }
+}

@@ -1,12 +1,21 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.nav-bar {
+  margin: 40px -40px;
+  width: 100%;
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.top-btn {
+  margin: 0 0 0 16px;
+  padding: 14px 20px;
+  color: white;
+  border: 2pt dotted white;
+  border-radius: 12px;
+  font-family: "Abril Fatface", serif;
+  font-size: 16pt;
+  float: right;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.top-btn:active, .top-btn:hover {
+  background-color: white;
+  color: $tangerine;
 }
+

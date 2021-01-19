@@ -1,0 +1,29 @@
+label {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+input {
+  font-family: "Work Sans", sans-serif;
+}
+
+input[type=submit] {
+  padding: 14px 20px;
+  color: white;
+  border: 2pt dotted white;
+  border-radius: 12px;
+  font-family: "Abril Fatface", serif;
+  font-size: 16pt;
+  float: right;
+}
+
+input[type=submit]:active, input[type=submit]:hover {
+  background-color: white;
+  color: $tangerine;
+}
+
+.form-container {
+  width: 40vw;
+  margin: 0 auto;
+}

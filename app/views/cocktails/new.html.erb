@@ -1,0 +1,13 @@
+<div class="nav-bar">
+  <%= link_to "All cocktails", cocktails_path, class: "top-btn" %>
+</div>
+<div class="title-container">
+  <h2>Add cocktail</h2>
+</div>
+
+<div class="form-container">
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit %>
+  <% end %>
+</div>
