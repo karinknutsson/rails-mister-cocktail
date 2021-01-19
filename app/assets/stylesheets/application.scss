@@ -1,0 +1,95 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;800;900&display=swap');
+
+$dark-sienna: #310A06;
+
+html, body, div {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+body {
+  background-image: url("https://www.cheatsheet.com/wp-content/uploads/2018/06/Martinez-cocktail.jpg");
+  background-size: cover;
+  color: $dark-sienna;
+}
+
+h2, h3, p, div {
+  font-family: "Work Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Abril Fatface", serif;
+  font-size: 132pt;
+}
+
+h3 {
+  font-weight: 700;
+  font-size: 16pt;
+}
+
+a, a:visited, a:hover, a:active {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-bar {
+  margin: 40px -40px;
+  width: 100%;
+}
+
+.title-container {
+  margin-top: 60px;
+  width: 100%;
+  text-align: center;
+  overflow: hidden;
+}
+
+.top-btn {
+  padding: 14px 20px;
+  color: white;
+  border: 1pt solid white;
+  border-radius: 12px;
+  font-family: "Abril Fatface", serif;
+  font-size: 16pt;
+  float: right;
+}
+
+.top-btn:active, .top-btn:hover {
+  background-color: white;
+  color: $dark-sienna;
+}
+
+.card-container {
+  margin: 36px auto;
+  width: 83vw;
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.cocktail-card {
+  /* background-color: rgba(255, 255, 255, 1); */
+  width: 320px;
+  height: 200px;
+  border: 2pt dotted white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
