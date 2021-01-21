@@ -7,4 +7,16 @@
   <h2><%= @cocktail.name %></h2>
 </div>
 
-<%= cl_image_tag @cocktail.photo.key, height: 500, width: 400 %>
+<div class="cocktail-container">
+
+  <%= cl_image_tag @cocktail.photo.key, height: 500, width: 400 %>
+
+  <%= link_to "New dose", new_cocktail_dose_path(cocktail_id: @cocktail.id) %>
+
+  <% @cocktail.doses.each do |dose| %>
+    <%= dose.description %>
+    <%= dose.ingredient.name %>
+  <% end %>
+
+
+</div>
