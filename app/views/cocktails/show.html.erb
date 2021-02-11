@@ -3,20 +3,25 @@
   <%= link_to "New cocktail", new_cocktail_path, class: "top-btn" %>
 </div>
 
-<div class="title-container">
-  <h2><%= @cocktail.name %></h2>
-</div>
 
 <div class="cocktail-container">
 
-  <%= cl_image_tag @cocktail.photo.key, height: 500, width: 400 %>
+  <div class="title-container">
+    <h2><%= @cocktail.name %></h2>
+  </div>
 
-  <%= link_to "New dose", new_cocktail_dose_path(cocktail_id: @cocktail.id) %>
+  <div class="image-container">
+    <%= cl_image_tag @cocktail.photo.key, height: 300, width: 300, crop: :fill %>
+  </div>
 
-  <% @cocktail.doses.each do |dose| %>
-    <%= dose.description %>
-    <%= dose.ingredient.name %>
-  <% end %>
+  <%= link_to "Add dose", new_cocktail_dose_path(cocktail_id: @cocktail.id) %>
+
+  <div class="ingredient-container">
+    <% @cocktail.doses.each do |dose| %>
+      <%= dose.description %> &nbsp;
+      <%= dose.ingredient.name %><br>
+    <% end %>
+  </div>
 
 
 </div>

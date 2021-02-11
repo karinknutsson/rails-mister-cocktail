@@ -10,7 +10,7 @@
 <div class="form-container">
   <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :description %>
-    <%= f.association :ingredient %>
+    <%= f.association :ingredient, :collection => Ingredient.order(:name).all %>
     <%= f.button :submit %>
   <% end %>
 </div>
